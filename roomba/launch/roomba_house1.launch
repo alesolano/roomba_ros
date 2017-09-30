@@ -1,0 +1,6 @@
+<launch>
+    <node pkg="stage_ros" type="stageros" name="stageros" args="/opt/ros/indigo/share/stage_ros/world/robotics-house1.world" />
+    <node pkg="topic_tools" type="drop" name="odom_drop" args="odom 5 10" />
+    <node pkg="roomba" type="obs_detect" name="laser" launch-prefix="xterm -e" />
+    <node pkg="roomba" type="roaming" name="roaming" launch-prefix="xterm -e" />
+</launch>
